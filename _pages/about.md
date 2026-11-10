@@ -2,33 +2,25 @@
 layout: about
 title: about
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
+subtitle: Computer Science PhD Student · Northeastern University
 profile:
   align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
+  image: elliot-kim.jpg
+  image_circular: false
   more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+    <p>Boston, Massachusetts</p>
+    <p><a href="mailto:kim.elliot@northeastern.edu">kim.elliot@northeastern.edu</a></p>
+selected_papers: true
+social: true
 ---
+Hi! I'm Elliot, a first-year PhD student in Computer Science at Northeastern University, advised by [Tina Eliassi-Rad](https://www.eliassi.org/).
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
+I study **why AI systems fail and how to make their behavior more interpretable and reliable**. My research connects LLM evaluation, graph representations, and AI agents for scientific discovery. I am particularly interested in what shared failures across models mean for the people and scientific workflows that rely on them.
 
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
+In my current work, I investigate how different representations of gene co-expression networks affect LLM agents' scientific analysis. Previously, I studied [correlated errors across LLMs](https://proceedings.mlr.press/v267/kim25e.html), including how shared errors can systematically exclude the same applicants in hiring pipelines.
 
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+I also build research software. Working with [Yuan-Sen Ting](https://www.ysting.space/), I used coding agents to develop and validate [pyKurucz](https://github.com/tingyuansen/pykurucz), a Python reimplementation of legacy Fortran stellar-atmosphere and spectrum-synthesis codes. This work provided the foundation for follow-up astrophysics research, including Payne Zero.
+
+Before Northeastern, I earned an M.Eng. in Computer Science and a B.A. in Computer Science and Information Science at Cornell University. I was fortunate to work with [Nikhil Garg](https://gargnikhil.com/), [Tong Zhang](https://tongzhang-ml.org/), and [David Strang](https://sociology.cornell.edu/david-strang). I also worked as a software engineer at Commure, building backend systems for healthcare revenue cycle management.
+
+[Research projects]({{ '/projects/' | relative_url }}) · [All publications]({{ '/publications/' | relative_url }}) · [CV]({{ '/cv/' | relative_url }})

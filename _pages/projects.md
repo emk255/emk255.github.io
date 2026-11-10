@@ -1,65 +1,37 @@
 ---
 layout: page
-title: projects
+title: research
 permalink: /projects/
-description: A growing collection of your cool projects.
+description: LLM evaluation, scientific agents, and research software.
 nav: true
 nav_order: 3
-display_categories: [work, fun]
-horizontal: false
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+## Graph representations for AI co-scientists
+**Northeastern University · September 2026–present · Advisor: Tina Eliassi-Rad**
 
-{% else %}
+I study how the representation of scientific graphs shapes LLM agents' analysis. My current work compares representations of 172 gene co-expression networks, including large, dense graphs with up to 7.6 million edges. The goal is to understand how agents use graph structure and how representation choices affect their conclusions.
 
-<!-- Display projects without categories -->
+## Correlated errors in large language models
+**Cornell University · June 2024–December 2025 · Advisor: Nikhil Garg**
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+Do different models provide independent perspectives? Our ICML 2025 paper studies shared errors across LLMs and their consequences for evaluation and hiring. I designed and implemented a cross-model evaluation; the hiring study covered 1,800 resume–job pairs and 20 LLMs, showing how correlated errors can systematically exclude the same applicants.
 
-  <!-- Generate cards for each project -->
+[Paper](https://proceedings.mlr.press/v267/kim25e.html) · [Code](https://github.com/nikhgarg/llm_correlated_errors_public/)
 
-{% if page.horizontal %}
+## Scientific reasoning and coding evaluation
+**UIUC ScaleML Lab · August 2025–May 2026 · Advisor: Tong Zhang**
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+I investigated performance degradation when LLMs used built-in web search on a challenging multimodal physics benchmark. I also built benchmark components covering 217 geometry problems evaluated with AlphaGeometry's symbolic proof engine and 53 scientific-computing tasks that checked LLM-generated Fortran against reference outputs.
+
+## pyKurucz and stellar spectrum synthesis
+**Research software · November 2025–June 2026 · Collaborator: Yuan-Sen Ting**
+
+As lead developer of pyKurucz, I used coding agents to translate legacy Kurucz ATLAS12 and SYNTHE Fortran codes into modular Python, validating the implementation against the original programs. The software enables stellar-spectrum experiments and integration with machine learning workflows, and served as the foundation for Payne Zero.
+
+[pyKurucz paper](https://arxiv.org/abs/2603.11693) · [Code](https://github.com/tingyuansen/pykurucz) · [Payne Zero paper](https://arxiv.org/abs/2607.24141)
+
+## Computational social science
+**Cornell Nexus Scholars · May–July 2023 · Advisor: David Strang**
+
+I built an automated pipeline using Selenium and ETL processes to collect 65,000 New York Times obituaries from LexisNexis into MongoDB, then integrated Google Trends data to analyze search interest.
